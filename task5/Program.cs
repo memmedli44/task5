@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Metrics;
+using System.Net.WebSockets;
 
 namespace task5
 {
@@ -32,12 +33,16 @@ namespace task5
             // * 2) 1-1000 qeder ededlerin icerisinde hem 7-e, hemde 8-e bolunenlerin siyahisi
             // */
             //int i;
-            //for (i = 0; i < 1001; i++)
+            //for (i = 1; i < 1001; i++)
             //{
             //    if (i % 56 == 0)
             //    {
             //        Console.WriteLine(i);
+
+
             //    }
+            //}
+
             #endregion
 
             #region Task 3            
@@ -48,12 +53,12 @@ namespace task5
 
             //for (i = 0; i < 1001; i++)
             //{
-            //    newnumber= i;
+            //    newnumber = i;
             //    int sum = 0;
-            //    while (newnumber > 0) 
+            //    while (newnumber > 0)
             //    {
-            //        int remainder=newnumber % 10;
-            //        newnumber /=10;
+            //        int remainder = newnumber % 10;
+            //        newnumber /= 10;
             //        sum += remainder;
             //    }
             //    if (sum % 3 != 0)
@@ -64,7 +69,7 @@ namespace task5
             //    {
             //        Console.WriteLine(i);
             //    }
-            //} 
+            //}
 
             #endregion
 
@@ -141,12 +146,20 @@ namespace task5
             //       hem reqemleri cemi tek eded olsun,
             //       hem I reqemi tek eded olsun
             // */
-            //int i, newnumber;
+            //int i, newnumber , scndNumber;
             //for (i = 0; i < 1001; i++)
             //{
             //    if (i % 2 == 0)
             //    {
-            //        if (i % 10 == 1)
+            //        int lastRemaider = 0;
+            //        scndNumber= i;
+            //        while (scndNumber > 0)
+            //        {
+            //            int remainder= scndNumber%10;
+            //            scndNumber /= 10;
+            //            lastRemaider = remainder;
+            //        }
+            //        if (lastRemaider % 2== 1)
             //        {
             //            newnumber = i;
             //            int sum = 0;
@@ -163,7 +176,7 @@ namespace task5
             //            }
 
             //        }
-            //    }             
+            //    }
             //}
             #endregion
 
@@ -190,7 +203,7 @@ namespace task5
 
             //            break;
             //        }
-                    
+
             //    }
             //    if (false)
             //    {
@@ -201,7 +214,87 @@ namespace task5
             //}
 
             #endregion
+
+            #region Task 8
+            ///*           
+            //  8)  1-1000 qeder ederlerin icerisinden,
+            //    daxilinde 3 reqemi olmayib,
+            //    reqemleri cemi 3 olan en sonuncu eded hansidir?
+            //*/
+            //int result = 0;
+            //for (int i = 0; i < 1001; i++)
+            //{
+            //l1:
+            //    int sum = 0;
+            //    int number = i;
+            //    bool stl = false;
+            //    while (number > 0)
+            //    {
+            //        int remainder = number % 10;
+            //        number /= 10;
+            //        if (remainder == 3)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+            //        sum += remainder;
+            //    }
+            //    if (sum == 3)
+            //    {
+            //        result= i;
+            //    }         
+
+
+
+
+            //}
+            //Console.WriteLine( result);
+            #endregion
+
+            #region Task 9
+            ///*
+            // * 9)  1-1000 qeder ederlerin icerisinde
+            //        11-e bolunub reqemleri cemi 11-den boyuk olan 11-ci eded hansidir?
+            // */
+            //int contains = 0;
+            //int result = 0;
+            //for (int i = 0; i < 1001; i++)
+            //{
+
+            //    int number = i;
+            //    int sum = 0;
+            //    if (i % 11 == 0)
+            //    {
+            //        while (number > 0)
+            //        {
+            //            int remainder = number % 10;
+            //            number /= 10;
+            //            sum += remainder;
+
+            //        }
+            //        if (sum > 11)
+            //        {
+
+            //            contains++;
+            //            result = i;
+            //        }
+
+            //        if (contains == 11)
+            //        {
+            //            Console.WriteLine(result);
+            //        }
+
+            //    }
+
+
+            //}
+            #endregion
+
+            #region Task 10
+
+            #endregion
         }
+
 
 
 
