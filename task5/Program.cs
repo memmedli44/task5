@@ -176,7 +176,7 @@ namespace task5
 
             //for (i = 0; i < 1001; i++)
             //{
-            //    bool stl;
+            //    bool stl=false;
             //    newnumber = i;
 
             //    while (newnumber > 0)
@@ -186,13 +186,13 @@ namespace task5
             //        newnumber /= 10;
             //        if (remainder == 3)
             //        {
-            //            stl=true; 
+            //            stl = true;
 
             //            break;
             //        }
-                    
+
             //    }
-            //    if (false)
+            //    if (!stl)
             //    {
             //        Console.WriteLine(i);
             //    }
