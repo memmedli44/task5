@@ -291,9 +291,138 @@ namespace task5
             #endregion
 
             #region Task 10
-            //hggh
+            ///*10) 1-1000 qeder CUT ederlerin icerisinde
+            //  reqemleri cemi 5 ile 7 arasinda olan en boyuk eded hansidir?
+            //*/
+            //int result = 0;
+            //for(int i=0;i<1001;i++)
+            //{               
+            //    if(i%2==0)                    
+            //    {
+            //        int newNubmer = i;
+            //        int sum = 0;
+
+            //        while(newNubmer > 0)
+            //        {
+            //            int remainder=newNubmer%10;
+            //            newNubmer /= 10;
+            //            sum += remainder;
+
+
+
+            //        }
+            //        if (sum > 5 && sum < 7)
+            //        {
+            //            if (result < i)
+            //            {
+            //                result = i;
+            //            }
+            //            Console.WriteLine(result);
+            //        }
+            //    }
+
+
+            //}
+            //Console.WriteLine($": en boyuk {result}");
             #endregion
+
+            #region Task 11
+            ///*11) 1 - 1000 qeder ederlerin icerisinden ele ededleri cap etki:
+            //    hem polindrom olsun,
+            //    hem ededin reqemleri daxilinde 3 olmasin
+            //    hem ededin reqemleri cemi 10 dan boyuk olsun
+            //*/
+            //for(int i=0;i<1001;i++)
+            //{
+            //    l1:
+            //    int example = i;
+            //    int sum = 0;
+            //    while(example > 0)
+            //    {
+            //        int remainder = example % 10;
+            //        example/= 10;
+            //        if(remainder==3)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+            //        sum+= remainder;
+            //    }
+            //    if(sum > 10) 
+            //    {
+            //        int reverse = 0;
+            //        int number = i;
+            //        while(number > 0)
+            //        {
+            //            int remainder = number % 10;
+            //            number/= 10;
+            //            reverse = reverse * 10 + remainder;
+            //        }
+            //        if(reverse==i)
+            //        {
+            //            Console.WriteLine(i);
+            //        }
+            //    }
+
+            //}
+            #endregion
+
+            #region Task 12
+            ///* 12) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
+            //      hem butun reqemleri eyni olsun,
+            //      hem reqemleri cemi 5 den boyuk olsun
+            //      hem reqemleri arasinda 5 reqemi olmasin                          
+            //*/
+            
+            //for (int i=10;i<100001;i++)
+            //{
+            //l1:
+            //    int result = 0;
+            //    if (i < 100001)
+            //    {
+                    
+            //        int example = i;
+            //        int sum = 0;
+            //        while (example > 0)
+            //        {
+            //            int remainder = example % 10;
+            //            example /= 10;
+            //            if (remainder == 5)
+            //            {
+            //                i++;
+            //                goto l1;
+            //            }
+            //            sum += remainder;
+            //        }
+            //        if (sum < 5) 
+            //        {
+            //            i++;
+            //            goto l1;
+                      
+            //        }
+
+            //        int number = i;
+            //        int firstNumber = number % 10;
+
+            //        while (number > 0)
+            //        {
+            //            int remainder = number % 10;
+            //            number /= 10;
+            //            if (firstNumber != remainder)
+            //            {
+
+            //                i++;
+            //                goto l1;
+            //            }
+            //        }                                   
+            //    }
+            //    Console.WriteLine(i);
+            //}            
+            #endregion
+
+
         }
+
 
 
 
