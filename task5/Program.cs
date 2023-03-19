@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Metrics;
+using System.Globalization;
 using System.Net.WebSockets;
 
 namespace task5
@@ -373,14 +374,14 @@ namespace task5
             //      hem reqemleri cemi 5 den boyuk olsun
             //      hem reqemleri arasinda 5 reqemi olmasin                          
             //*/
-            
+
             //for (int i=10;i<100001;i++)
             //{
             //l1:
             //    int result = 0;
             //    if (i < 100001)
             //    {
-                    
+
             //        int example = i;
             //        int sum = 0;
             //        while (example > 0)
@@ -398,7 +399,7 @@ namespace task5
             //        {
             //            i++;
             //            goto l1;
-                      
+
             //        }
 
             //        int number = i;
@@ -420,19 +421,200 @@ namespace task5
             //}            
             #endregion
 
+            #region Task  13
+            ///*13) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
+            //      hem butun reqemleri yalniz tek ededlerden ibaret olsun,
+            //      polindrom olsun,
+            //      daxilinde minimum 1 dene 5 reqemi olsun
+            //*/
+            //for (int i=1;i<100001;i++)
+            //{
+            //l1: 
+            //    bool stiuate = true;
+            //    int result = 0;
+            //    int number = i;                
+            //    int reverse = 0;
+            //    while (number > 0)
+            //    {
+            //        int remainder = number % 10;
+            //        number/= 10;
+            //        if(remainder%2==0)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+            //        reverse = reverse * 10 + remainder;
+            //    }
+            //   // Console.WriteLine(i);
+            //    if (reverse!=i)
+            //    {
+            //        i++;
+            //        goto l1;    
+            //    }
+            //    int numberTwo = i;
+
+            //    //Console.WriteLine(i);
+            //    while (numberTwo > 0)
+            //    {
+            //        int remainder = numberTwo % 10;
+            //        numberTwo /= 10;
+            //        if (remainder == 5)
+            //        {
+            //            stiuate = true;
+            //            result = i;
+            //            break;
+
+
+            //        }
+            //        else
+            //        {
+            //            stiuate = false;
+            //        }
+            //    }
+            //    if (stiuate ) 
+            //    {
+            //        Console.WriteLine(result);
+
+            //    }
+            //}
+
+            #endregion
+
+            #region Task  14
+            ///*14) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
+            //      hem ededin ozunun daxilinde 2 dene yanashi gelen 1 reqemi olsun
+            //      hem ededin reqemleri cemi 7- 15 arasinda olsun.
+            //      hem ededin reqemlerinin daxilinde 6 reqemi olmasin
+            //      hem ededin ozunun daxilinde minimum 2 dene 5 olsun,
+            //*/
+            //for (int i = 1; i < 100001; i++)
+            //{
+            //l1:
+            //    bool stiuate = true;         
+            //    int number = i;
+            //    int numberThree = 0;
+            //    int lastNumber = 0;
+            //    int sum = 0;
+            //    while (number > 0)
+            //    {
+            //        int remainder = number % 10;
+            //        number /= 10;
+            //        if (remainder % 6 == 0)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+            //        sum += remainder;
+            //    }
+            //    // Console.WriteLine(i);
+            //    if (sum <= 7 || sum>=15)
+            //    {
+            //        i++;
+            //        goto l1;
+            //    }
+            //    int numberTwo = i;
+
+            //    //Console.WriteLine(i);
+            //    while (numberTwo > 0)
+            //    {
+            //        int remainder = numberTwo % 10;
+            //        numberTwo /= 10;
+            //        if (remainder == 1)
+            //        {
+            //            if (numberTwo % 10 == 1) 
+            //            {
+            //                stiuate = true;
+            //                numberThree = i;
+            //            }
+
+            //        }
+
+            //    }
+            //    //Console.WriteLine(numberThree);
+            //    bool resultStl = true;
+            //    if (stiuate)
+            //    {
+            //       // Console.WriteLine(numberThree);
+            //        //i = numberThree;
+
+            //        while (numberThree > 0)
+            //        {
+            //            int remainder = numberThree % 10;
+            //            numberThree /= 10;
+            //            lastNumber= numberThree;
+            //            if (remainder == 5)
+            //            {
+            //                while (lastNumber > 0)
+            //                {
+            //                    int remainderTwo=lastNumber% 10;
+            //                    lastNumber /= 10;
+            //                    if(remainderTwo==5)
+            //                    {
+
+            //                        resultStl = false;
+
+            //                        break;
+
+            //                    }
+
+            //                }
+            //            }
+            //        }
+            //    }
+            //    if(!resultStl) 
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            #endregion
+
+            #region task 15
+           // /*15)*1 - 10000 qeder ederlerin icerisinden ele ededleri cap etki:
+           //       hem sade eded olsun
+           //       hem ededin ozunun daxilinde 0,1,5,7,9 reqemleri olmasin
+           //       hem ededin reqemleri ceminde 2 reqemi olmasin 
+           // */
+           // int[] number = { 0, 1, 5, 7, 9 };
+           // for (int i = 1; i < 10001; i++)
+           // {
+           //l1:
+           //     for (int j = 2; j <= i / 2; j++)
+           //     {
+           //         if(i%j==0)
+           //         {
+           //             i++;
+           //             goto l1;
+           //         }
+           //     }
+           //     //Console.WriteLine(i);
+           //     int step = i;
+           //     int sum = 0;
+           //     while(step > 0)
+           //     {
+           //         int remainder = step % 10;
+           //         step/= 10;
+           //         if (Array.IndexOf(number, remainder) != -1)
+           //         {
+           //             i++;
+           //             goto l1;
+           //         }
+           //         sum+= remainder;
+           //     }
+           //     while (sum > 0)
+           //     {
+           //         int remainder = sum % 10;
+           //         sum/= 10;
+           //         if (remainder == 2)
+           //         {
+           //             i++;
+           //             goto l1;
+           //         }
+           //     }
+           //     Console.WriteLine(i);
+           // }   
+            #endregion
 
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }
 
